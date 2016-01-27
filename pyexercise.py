@@ -7,7 +7,7 @@ def fun_1( your_id ):
 
 def my_integral():
     x = sy.Symbol('x')
-    ans = sy.integrate( sy.exp(-x**2), (x,0, sy.oo))
+    ans = sy.integrate( sy.exp(x)+1/(x**(2)+1), (x,0, 2))
     return ans
 
 def my_solution():
@@ -18,7 +18,7 @@ def my_solution():
 
 
 if __name__ == '__main__':
-    your_id = 12345678
+    your_id = 1307589
     print('Hexadecimal representation of %d is %s'%( your_id, fun_1( your_id) ))
     print('Integral = ', my_integral())
     print('Solution = ', my_solution())
