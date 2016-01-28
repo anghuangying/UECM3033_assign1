@@ -7,18 +7,27 @@ def fun_1( your_id ):
 
 def my_integral():
     x = sy.Symbol('x')
-    ans = sy.integrate( sy.exp(-x**2), (x,0, sy.oo))
+    ans = sy.integrate( (2*x)*sy.cos(3*x+ sy.pi), (x,sy.pi/3,sy.pi/6))
     return ans
 
 def my_solution():
-    A = np.array( [[3,1], [1,2]] )
-    b = np.array([9,8])
+    A = np.array( [[1,2,3,4,5,6,7,8,9,0], 
+                   [2,3,4,5,6,7,8,9,10,11], 
+                   [3,4,5,6,7,8,9,0,11,12], 
+                   [4,5,6,7,8,9,10,11,12,13], 
+                   [5,6,7,8,9,0,11,12,13,14],
+                   [6,7,8,9,10,11,12,13,14,15],
+                   [7,8,9,0,11,12,13,14,15,16], 
+                   [8,9,10,11,12,13,14,15,16,17],
+                   [9,0,11,12,13,14,15,16,17,18], 
+                   [10,11,12,13,14,15,16,17,18,19]] )
+    b = np.array([405,475,545,615,685,755,825,895,965,985])
     x = np.linalg.solve(A,b) # Solve Ax = b
     return x
 
 
 if __name__ == '__main__':
-    your_id = 12345678
+    your_id = 1307589
     print('Hexadecimal representation of %d is %s'%( your_id, fun_1( your_id) ))
     print('Integral = ', my_integral())
     print('Solution = ', my_solution())
