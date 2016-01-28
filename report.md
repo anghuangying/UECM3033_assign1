@@ -30,6 +30,7 @@ In this section, please report:
 
     1.The hexadecimal value of your student ID.
     Hexadecimal representation of 1307589 is 0x13f3c5
+
     2.Write down the definite integrals that you have chosen.
 $$\int_{\pi/3}^{\pi/6} {2xcos}{(3x+\pi)} dx= - \frac {\pi}{9}-\frac{2}{9}$$
     
